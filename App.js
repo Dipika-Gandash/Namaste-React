@@ -1,22 +1,30 @@
-const parent = React.createElement(
-  'div', {id :'mainDiv'}, 
-  [
-       React.createElement('div', {id : "innerDiv"}, 
-       [
-            React.createElement('h1', {id : "head1"}, 'Child 1 insie innerDiv'),
-            React.createElement('h1', {id : "head2"}, 'Child 2 inside innerDiv')
-       ]),
-       React.createElement('div', {id : "outerDiv"}, 
-            [
-                 React.createElement('h2', {id : "head3"}, "Child 3 inside outerDiv"),
-                 React.createElement('h2', {id : "head4"}, "Child 4 inside outerDiv")
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-            ]
-       )
-  ]
-)
+const element = <span>React ELement</span>
 
+// React functional Component
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const Title = function () {
+     return (
+          <>
+          {element}
+          <h1>This is my Title</h1>
+          </>
+     )
+}
 
-root.render(parent)
+const number= 1000;
+
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+     <Title />
+      <h1 className="head">Namaste React Functional Component</h1>
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeadingComponent />);
