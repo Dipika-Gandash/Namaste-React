@@ -80,3 +80,9 @@
      object-fit: cover;
      
    }
+
+   .filter-btn{
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+   }
